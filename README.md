@@ -1,5 +1,5 @@
 # mylib
-Repository for my library source files
+- Repository for my library source files
 -----
 ## Function
 
