@@ -6,7 +6,7 @@
 /*   By: sashin <sashin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 11:33:48 by sashin            #+#    #+#             */
-/*   Updated: 2021/04/19 16:45:18 by sashin           ###   ########.fr       */
+/*   Updated: 2021/06/19 18:05:29 by sashin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,10 @@
 
 void			ft_putstr_fd(char *s, int fd)
 {
-	int			idx;
+	int			len;
 
-	idx = 0;
-	while (s[idx])
-		write(fd, &s[idx++], 1);
+	len = 0;
+	while (s[len])
+		++len;
+	write(fd, s, len);
 }
