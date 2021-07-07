@@ -6,7 +6,7 @@
 /*   By: sashin <sashin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 20:27:40 by sashin            #+#    #+#             */
-/*   Updated: 2021/07/07 11:50:11 by sashin           ###   ########.fr       */
+/*   Updated: 2021/07/07 12:38:02 by sashin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,7 @@ int	get_next_line(int fd, char **line)
 		buf[rd_size] = '\0';
 		stack[fd] = ft_strdup(buf);
 	}
+	pt = NULL;
 	get_data(pt, fd, buf, stack);
 	free(buf);
 	return (gnl_input_line(line, &stack[fd], pt));
